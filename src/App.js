@@ -168,7 +168,13 @@ function BillForm({ selectedFriend }) {
       <input
         type="text"
         value={yourExpense}
-        onChange={(e) => setYourExpense(Number(e.target.value))}
+        onChange={(e) =>
+          setYourExpense(
+            Number(e.target.value) > bill
+              ? Number(e.target.value)
+              : e.target.value,
+          )
+        }
       />
       <label>🙋‍♀️ {selectedFriend.name}'s Expense</label>
       <input type="text" disabled value={friendExpense} />
