@@ -170,7 +170,7 @@ function BillForm({ selectedFriend }) {
         value={yourExpense}
         onChange={(e) =>
           setYourExpense(
-            Number(e.target.value) > bill
+            Number(e.target.value) > billValue
               ? Number(e.target.value)
               : e.target.value,
           )
